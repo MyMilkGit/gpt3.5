@@ -28,7 +28,7 @@ export default function Root() {
       <Head>
         <PrefixTitle />
         <Meta charset="utf-8" />
-        <Link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/MyMilkGit/image-warehouse/favicon.svg" />
+        <Link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/MyMilkGit/image-warehouse/favicon.ico" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Link
           rel="apple-touch-icon"
