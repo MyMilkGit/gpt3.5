@@ -28,11 +28,11 @@ export default function Root() {
       <Head>
         <PrefixTitle />
         <Meta charset="utf-8" />
-        <Link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <Link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/MyMilkGit/image-warehouse/favicon.svg" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Link
           rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
+          href="https://cdn.jsdelivr.net/gh/MyMilkGit/image-warehouse/apple-touch-icon.png"
           sizes="192x192"
         />
         {pwaInfo?.webManifest?.href ? (
