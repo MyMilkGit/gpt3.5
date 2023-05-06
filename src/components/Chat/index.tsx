@@ -176,13 +176,8 @@ export default function () {
       }),     
       signal: controller?.signal
     })
-    logtail.error("Something bad happend.");
-    logtail.info("Log message with structured data.", {
-        item: "Orange Soda",
-        price: 100.00
-    });
-
-    // Ensure that all logs are sent to Logtail
+    
+    logtail.info(JSON.stringify({messages}));
     logtail.flush()
 
     console.info(JSON.stringify({messages}));
