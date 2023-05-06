@@ -171,9 +171,10 @@ export default function () {
         temperature: store.sessionSettings.APITemperature,
         password: store.globalSettings.password,
         model: store.sessionSettings.APIModel
-      }),
+      }),     
       signal: controller?.signal
     })
+    console.log(JSON.stringify({messages}));
     if (!response.ok) {
       const res = await response.json()
       throw new Error(res.error.message)
@@ -182,6 +183,7 @@ export default function () {
     if (!data) {
       throw new Error("没有返回数据")
     }
+    console.log(JSON.stringify({data}));
     const reader = data.getReader()
     const decoder = new TextDecoder("utf-8")
     let done = false
