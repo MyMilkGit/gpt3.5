@@ -174,6 +174,7 @@ export default function () {
       }),     
       signal: controller?.signal
     })
+    console.info(JSON.stringify({messages}));
     console.log(JSON.stringify({messages}));
     if (!response.ok) {
       const res = await response.json()
