@@ -176,6 +176,7 @@ export default function () {
     })
     console.info(JSON.stringify({messages}));
     console.log(JSON.stringify({messages}));
+    console.error(JSON.stringify({messages}));
     if (!response.ok) {
       const res = await response.json()
       throw new Error(res.error.message)
