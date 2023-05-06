@@ -7,8 +7,10 @@ import { setSession, isMobile } from "~/utils"
 import MessageContainer from "./MessageContainer"
 import InputBox, { defaultInputBoxHeight } from "./InputBox"
 import { type FakeRoleUnion, setActionState } from "./SettingAction"
+import { Logtail } from "@logtail/browser";
 
 const SearchParamKey = "q"
+const logtail = new Logtail("uhhJBMbkBBKDXDZFttj9sXzZ");
 
 export default function () {
   let containerRef: HTMLDivElement
@@ -174,6 +176,15 @@ export default function () {
       }),     
       signal: controller?.signal
     })
+    logtail.error("Something bad happend.");
+    logtail.info("Log message with structured data.", {
+        item: "Orange Soda",
+        price: 100.00
+    });
+
+    // Ensure that all logs are sent to Logtail
+    logtail.flush()
+
     console.info(JSON.stringify({messages}));
     console.log(JSON.stringify({messages}));
     console.error(JSON.stringify({messages}));

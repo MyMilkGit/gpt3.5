@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@kangc/v-md-editor": "^2.3.15",
+    "@logtail/browser": "^0.4.0",
     "@solid-primitives/event-listener": "^2.2.10",
     "@solid-primitives/media": "^2.1.6",
     "@solid-primitives/resize-observer": "^2.0.15",
